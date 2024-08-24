@@ -1,0 +1,38 @@
+RATA_RATA_TIGA_BILANGAN
+START
+  READ a, b, c;
+  sum = a + b + c;
+  average = sum / 3;
+
+  PRINT average;
+END
+
+
+MENGHITUNG_TEGANGAN
+START
+  READ ampere, ohm;
+  volt = ampere * ohm;
+
+  PRINT volt;
+END
+
+
+KONVERSI_MATA_UANG
+START
+  READ int rupiah;
+  READ string code_conversion; // ex: usd untuk us dollar, yen untuk yen, eur untuk euro
+
+  CALL convert_value with rupiah RETURNING converted_value;
+  PRINT converted_value;
+END
+
+KONVERSI_SUHU
+START
+  READ float celcius;
+
+  float reamur = celcius * 4 / 5;
+  float fahrenheit = (celcius * 9 / 5) + 32;
+  float kelvin = celcius + 273;
+
+  PRINT reamur, fahrenheit, kelvin;
+END
