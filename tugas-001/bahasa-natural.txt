@@ -1,0 +1,53 @@
+memasak mie instant
+- mulai
+- siapkan air sebanyak 400ml
+- panaskan air hingga mendidih
+- masukkan mie ke dalam air mendidih selama 3 menit
+- tiriskan mie dan sajikan di atas piring
+- tuangkan bumbu pada mie 
+- aduk bumbu hingga rata
+- selesai 
+
+menggunakan komputer di lab
+- mulai
+- apakah listrik tersedia? ya, lanjut ke tahap berikutnya, tidak, tambah satu tahap nyalakan aliran listrik
+- apakah kabel daya terpasang? ya, lanjut ke tahap berikutnya, tidak, pasang kabel daya
+- nyalakan monitor
+- nyalakan komputer
+- tunggu proses booting selesai
+- selesai
+
+rata-rata tiga bilangan
+- mulai
+- input bilangan pertama
+- input bilangan kedua
+- input bilangan ketiga
+- hitung jumlah data
+- bagi jumlah data dengan banyak data
+- tampilkan rata-rata
+- selesai
+
+menghitung tegangan
+- mulai 
+- input nilai arus (ampere)
+- input nilai tahanan (ohm)
+- hitung tegangan dengan mengalikan nilai arus dan tahanan
+- tampilkan nilai arus
+- selesai
+
+konversi mata uang
+- mulai
+- input nilai mata uang dalam rupiah
+- input kode konversi (dollar: usd, yen: yen, euro: eur)
+- hitung nilai rupiah ke konversi yang dipilih
+- tampilkan nilai hasil konversi
+- selesai
+
+konversi suhu
+- mulai
+- input nilai suhu dalam celcius
+- hitung nilai dalam reamur (r)
+- hitung nilai dalam fahrenheit (f)
+- hitung nilai dalam kelvin (K)
+- tampilkan r, f, K
+- selesai
