@@ -1,9 +1,42 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.7">
   <diagram name="Page-1" id="tB5CQHO0TRVabGKXUqhu">
-    <mxGraphModel>
+    <mxGraphModel dx="1050" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="gBuZF0G5z6pku1You0ux-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-1" target="gBuZF0G5z6pku1You0ux-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Mulai&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="330" y="40" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-2" target="gBuZF0G5z6pku1You0ux-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Input nilai arus&lt;/font&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;(ampere)&lt;/font&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="310" y="130" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-4" target="gBuZF0G5z6pku1You0ux-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Input nilai tahanan&lt;/font&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;(ohm)&lt;/font&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="310" y="240" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-6" target="gBuZF0G5z6pku1You0ux-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Hitung tegangan&lt;/font&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;volt = ampere * ohm&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="315" y="360" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-8" target="gBuZF0G5z6pku1You0ux-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-8" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Tampilkan nilai&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;tegangan&lt;/span&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="310" y="480" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gBuZF0G5z6pku1You0ux-10" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Selesai&lt;/span&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="330" y="600" width="120" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
