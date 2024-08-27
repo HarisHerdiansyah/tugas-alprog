@@ -4,38 +4,44 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="gBuZF0G5z6pku1You0ux-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-1" target="gBuZF0G5z6pku1You0ux-2">
+        <mxCell id="gBuZF0G5z6pku1You0ux-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="gBuZF0G5z6pku1You0ux-1" target="gBuZF0G5z6pku1You0ux-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Mulai&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="330" y="40" width="120" height="50" as="geometry" />
+        <mxCell id="gBuZF0G5z6pku1You0ux-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Mulai&lt;/font&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="90" y="80" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-2" target="gBuZF0G5z6pku1You0ux-4">
+        <mxCell id="gBuZF0G5z6pku1You0ux-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="gBuZF0G5z6pku1You0ux-2" target="gBuZF0G5z6pku1You0ux-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Input nilai arus&lt;/font&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;(ampere)&lt;/font&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="310" y="130" width="160" height="70" as="geometry" />
+        <mxCell id="gBuZF0G5z6pku1You0ux-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Input nilai arus&lt;/font&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;(ampere)&lt;/font&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="1" vertex="1">
+          <mxGeometry x="70" y="170" width="160" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-4" target="gBuZF0G5z6pku1You0ux-6">
+        <mxCell id="gBuZF0G5z6pku1You0ux-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="gBuZF0G5z6pku1You0ux-4" target="gBuZF0G5z6pku1You0ux-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Input nilai tahanan&lt;/font&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;(ohm)&lt;/font&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="310" y="240" width="160" height="70" as="geometry" />
+        <mxCell id="gBuZF0G5z6pku1You0ux-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Input nilai tahanan&lt;/font&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;(ohm)&lt;/font&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="1" vertex="1">
+          <mxGeometry x="60" y="280" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-6" target="gBuZF0G5z6pku1You0ux-8">
+        <mxCell id="gBuZF0G5z6pku1You0ux-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="gBuZF0G5z6pku1You0ux-6" target="gBuZF0G5z6pku1You0ux-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Hitung tegangan&lt;/font&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;volt = ampere * ohm&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="315" y="360" width="150" height="70" as="geometry" />
+        <mxCell id="gBuZF0G5z6pku1You0ux-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Hitung tegangan&lt;/font&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;volt = ampere * ohm&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="75" y="400" width="150" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gBuZF0G5z6pku1You0ux-8" target="gBuZF0G5z6pku1You0ux-10">
+        <mxCell id="gBuZF0G5z6pku1You0ux-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="gBuZF0G5z6pku1You0ux-8" target="gBuZF0G5z6pku1You0ux-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-8" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Tampilkan nilai&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;tegangan&lt;/span&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
-          <mxGeometry x="310" y="480" width="160" height="70" as="geometry" />
+        <mxCell id="gBuZF0G5z6pku1You0ux-8" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Tampilkan nilai&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;tegangan&lt;/span&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="1" vertex="1">
+          <mxGeometry x="70" y="520" width="160" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="gBuZF0G5z6pku1You0ux-10" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Selesai&lt;/span&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="330" y="600" width="120" height="50" as="geometry" />
+        <mxCell id="gBuZF0G5z6pku1You0ux-10" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Selesai&lt;/span&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="90" y="640" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ln7pJaZYQG9SrKI5YlB6-1" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Algoritma menghitung nilai tegangan&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="380" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ln7pJaZYQG9SrKI5YlB6-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Pseudocode&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Algoritma&lt;/b&gt; menghitung nilai tegangan&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Deklarasi&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;float ampere, ohm, volt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Deskripsi&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;read(ampere, ohm);&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;volt = ampere * ohm;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;write(volt);&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="320" y="80" width="290" height="220" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
