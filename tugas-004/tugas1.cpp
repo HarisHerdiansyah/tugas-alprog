@@ -14,8 +14,7 @@ int main()
   cout << setw(47) << setfill('-') << '\n';
 
   int x = 0;
-  while (x <= 360)
-  {
+  while (x <= 360) {
     cout << '\n';
     cout << '|' << left << setw(14) << setfill(' ') << x;
     cout << '|' << left << setw(14) << setfill(' ') << setprecision(2) << sin(x * RADIAN);

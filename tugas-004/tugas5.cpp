@@ -32,7 +32,7 @@ void diamond() {
   cout << pattern;
 }
 
-void cross() {
+void plus_sign() {
   string pattern;
   int n = 10;
 
@@ -147,11 +147,5 @@ void hourglass() {
 }
 
 int main() {
-  diamond();
-  cross();
-  alphabet_e();
-  hexagon();
-  alphabet_t();
-  hourglass();
   return 0;
 }
