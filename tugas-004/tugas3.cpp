@@ -1,3 +1,11 @@
+/*
+Nama Program  : Evaluasi output
+Nama          : Haris Herdiansyah
+NPM           : 140810240074
+Tanggal Buat  : 18 September 2024
+Deskripsi     : Evaluasi output dari dua sample kode dengan perulangan for-loop dengan berbagai kondisi
+*/
+
 #include <iostream>
 using namespace std;
 

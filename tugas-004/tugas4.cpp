@@ -1,3 +1,11 @@
+/*
+Nama Program  : Mencetak pola bintang dengan angka dan asterisk
+Nama          : Haris Herdiansyah
+NPM           : 140810240074
+Tanggal Buat  : 18 September 2024
+Deskripsi     : Pola segitiga dengan angka dan asterisk dengan skema for-loop dan while loop
+*/
+
 #include <iostream>
 using namespace std;
 

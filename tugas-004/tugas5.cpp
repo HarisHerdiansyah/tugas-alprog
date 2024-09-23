@@ -1,3 +1,11 @@
+/*
+Nama Program  : Variasi pola bintang ukuran 10 x 10
+Nama          : Haris Herdiansyah
+NPM           : 140810240074
+Tanggal Buat  : 18 September 2024
+Deskripsi     : Variasi enam pola ukuran 10 x 10 (belah ketupat, tanda plus, huruf `E`, segienam, huruf `T`, dan hourglass)
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;

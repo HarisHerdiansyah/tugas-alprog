@@ -1,3 +1,11 @@
+/*
+Nama Program  : Tabel Perhitungan Sederhana
+Nama          : Haris Herdiansyah
+NPM           : 140810240074
+Tanggal Buat  : 18 September 2024
+Deskripsi     : Program untuk mencetak tabel perhitungan dari sebuah nilai dimulai dari 1 s/d batas yang diberikan user dengan kalkulasi 1/X, X^2, X^3
+*/
+
 #include <iostream>
 #include <cmath>
 #include <iomanip>

@@ -1,3 +1,11 @@
+/*
+Nama Program  : Tabel Trigonometri
+Nama          : Haris Herdiansyah
+NPM           : 140810240074
+Tanggal Buat  : 18 September 2024
+Deskripsi     : Program untuk mencetak tabel trigonometri
+*/
+
 #include <iostream>
 #include <cmath>
 #include <iomanip>
