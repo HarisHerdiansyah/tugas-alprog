@@ -13,7 +13,7 @@
         <mxCell id="6t2x3b4xjw4AcIhOX0Pv-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" parent="1" source="6t2x3b4xjw4AcIhOX0Pv-3" target="6t2x3b4xjw4AcIhOX0Pv-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6t2x3b4xjw4AcIhOX0Pv-3" value="bool re_run = true&lt;div style=&quot;line-height: 100%; font-size: 14px;&quot;&gt;int pattern, style&lt;/div&gt;" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.19;align=center;labelPosition=center;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="6t2x3b4xjw4AcIhOX0Pv-3" value="bool is_re_run = true&lt;div style=&quot;line-height: 100%; font-size: 14px;&quot;&gt;int pattern, style&lt;/div&gt;" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=hexagon;perimeter=hexagonPerimeter2;arcSize=6;size=0.19;align=center;labelPosition=center;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="339" y="-931" width="139" height="76" as="geometry" />
         </mxCell>
         <mxCell id="6t2x3b4xjw4AcIhOX0Pv-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" parent="1" source="6t2x3b4xjw4AcIhOX0Pv-5" target="6t2x3b4xjw4AcIhOX0Pv-7" edge="1">
@@ -24,7 +24,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="6t2x3b4xjw4AcIhOX0Pv-5" value="re_run IS&lt;div&gt;TRUE?&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="6t2x3b4xjw4AcIhOX0Pv-5" value="is_re_run IS&lt;div&gt;TRUE?&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="350" y="-817" width="117" height="114" as="geometry" />
         </mxCell>
         <mxCell id="6t2x3b4xjw4AcIhOX0Pv-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" parent="1" source="6t2x3b4xjw4AcIhOX0Pv-7" target="6t2x3b4xjw4AcIhOX0Pv-9" edge="1">
@@ -74,7 +74,7 @@
         <mxCell id="6t2x3b4xjw4AcIhOX0Pv-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" parent="1" source="6t2x3b4xjw4AcIhOX0Pv-17" target="6t2x3b4xjw4AcIhOX0Pv-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="6t2x3b4xjw4AcIhOX0Pv-17" value="CALL gate(pattern, style)&lt;div style=&quot;font-size: 14px;&quot;&gt;re_run = gate(pattern, style)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="6t2x3b4xjw4AcIhOX0Pv-17" value="CALL gate(pattern, style)&lt;div style=&quot;font-size: 14px;&quot;&gt;is_re_run = gate(pattern, style)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="323" y="-133" width="171" height="76" as="geometry" />
         </mxCell>
         <mxCell id="6t2x3b4xjw4AcIhOX0Pv-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" parent="1" source="6t2x3b4xjw4AcIhOX0Pv-19" target="6t2x3b4xjw4AcIhOX0Pv-24" edge="1">
@@ -108,7 +108,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Ld0gVEIM00X8YSf4t7XU-1" value="Flowchart Fungsi main()" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="1">
+        <mxCell id="Ld0gVEIM00X8YSf4t7XU-1" value="Flowchart Fungsi main()" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" parent="1" vertex="1">
           <mxGeometry x="76" y="-1064" width="266" height="30" as="geometry" />
         </mxCell>
       </root>
