@@ -1,3 +1,10 @@
+/**
+ * Nama Program : Faktorial, Permutasi, dan Kombinas
+ * Nama         : Haris Herdiansyah
+ * NPM          : 140810240074
+ * Tanggal Buat : 01 Oktober 2024
+ */
+
 #include <iostream>
 #include <string>
 using namespace std;

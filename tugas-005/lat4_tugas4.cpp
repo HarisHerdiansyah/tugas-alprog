@@ -54,9 +54,13 @@ int main() {
   cin >> row;
 
   forl_triangle(row);
+  cout << endl;
   forl_invert_triangle(row);
+  cout << endl;
   whilel_triangle(row);
+  cout << endl;
   whilel_invert_triangle(row);
+  cout << endl;
 
   return 0;
 }
