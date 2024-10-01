@@ -1,15 +1,14 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 // * Faktorial Void Non-Rekursif
-void non_r_fact_void(int n) {
-  long long int result = 1;
+void non_r_fact_void(int n, long long int &result) {
   if (n > 1) {
     for (int i = 1; i <= n; i++) {
       result *= i;
     }
   }
-  cout << "Faktorial dari " << n << " adalah: " << result << " // Void" << endl;
 }
 
 // * Faktorial Fungsi Non-Rekursif
@@ -32,9 +31,8 @@ long long int r_fact_fn(int n) {
 }
 
 // * Kombinasi Void
-void combination_void(int n, int r) {
-  long long int K = r_fact_fn(n) / (r_fact_fn(n - r) * r_fact_fn(r));
-  cout << "Kombinasi dari " << n << " dan " << r << " adalah: " << K << " // Void" << endl; 
+void combination_void(int n, int r, long long int &result) {
+  result = r_fact_fn(n) / (r_fact_fn(n - r) * r_fact_fn(r));
 }
 
 // * Kombinasi Fungsi
@@ -43,9 +41,8 @@ long long int combination_fn(int n, int r) {
 }
 
 // * Permutasi Void
-void permutation_void(int n, int r) {
-  long long int P = r_fact_fn(n) / r_fact_fn(n - r);
-  cout << "Permutasi dari " << n << " dan " << r << " adalah: " << P << " // Void" << endl; 
+void permutation_void(int n, int r, long long int &result) {
+  result = r_fact_fn(n) / r_fact_fn(n - r);
 }
 
 // * Permutasi Fungsi
@@ -53,62 +50,83 @@ long long int permutation_fn(int n, int r) {
   return r_fact_fn(n) / r_fact_fn(n - r);
 }
 
-// * Input Nilai n
-void input_n(int &n) {
-  cout << "Masukkan nilai n: ";
-  cin >> n;
+void input_menu(int &menu, int &n, int &r) {
+  bool is_input_valid = false;
+
+  while (!is_input_valid) {
+    cout << "Pilih salah satu di bawah ini: \n";
+    cout << "1. Faktorial Non Rekursif\n";
+    cout << "2. Faktorial Non Rekursif Void\n";
+    cout << "3. Faktorial Rekursif\n";
+    cout << "4. Permutasi\n";
+    cout << "5. Permutasi Void\n";
+    cout << "6. Kombinasi\n";
+    cout << "7. Kombinasi Void\n";
+    cout << "99. Keluar\n";
+
+    cout << "Input: ";
+    cin >> menu;
+
+    is_input_valid = menu >= 1 && menu <= 7 || menu == 99;
+  }
 }
 
-// * Input Nilai r
-void input_r(int &r) {
-  cout << "Masukkan nilai r: ";
-  cin >> r;
+void input_value(int &val, string code) {
+  bool is_input_valid = false;
+
+  while (!is_input_valid) {
+    cout << "Masukkan nilai " + code << ": ";
+    cin >> val;
+
+    is_input_valid = val >= 0;
+  }
 }
 
-void print_factorial(int &n) {
-  non_r_fact_void(n);
-  cout << "Faktorial dari " << n << " adalah: " << non_r_fact_fn(n) << " // Fungsi" << endl;
-  cout << "Faktorial dari " << n << " adalah: " << r_fact_fn(n) << " // Rekursif" << endl;
-}
-
-void print_permutation(int &n, int &r) {
-  permutation_void(n, r);
-  cout << "Permutasi dari " << n << " dan " << r << " adalah: " << permutation_fn(n, r) << " // Fungsi" << endl; 
-}
-
-void print_combination(int &n, int &r) {
-  combination_void(n, r);
-  cout << "Kombinasi dari " << n << " dan " << r << " adalah: " << combination_fn(n, r) << " // Fungsi" << endl; 
-}
-
-void prompt_menu(int &menu, int &n, int &r) {
-  cout << "1. Faktorial\n";
-  cout << "2. Permutasi\n";
-  cout << "3. Kombinasi\n";
-  cout << "Hitung: ";
-  cin >> menu;
-
-  if (menu == 1) {
-    input_n(n);
-  } else if (menu == 2) {
-    input_n(n);
-    input_r(r);
-  } else if (menu == 3) {
-    input_n(n);
-    input_r(r);
+void print_calculation(int &menu, int &n, int &r) {
+  long long int result = 1;
+  switch (menu) {
+    case 1:
+      result = non_r_fact_fn(n);
+      cout << "Faktorial dari " << n << ": " << result << " // Fungsi";
+      break;
+    case 2:
+      non_r_fact_void(n, result);
+      cout << "Faktorial dari " << n << ": " << result << " // Void";
+      break;
+    case 3:
+      result = r_fact_fn(n);
+      cout << "Faktorial dari " << n << ": " << result << " // Rekursif";
+      break;
+    case 4:
+      result = permutation_fn(n, r);
+      cout << "Permutasi dari " << n << " dan " << r << ": " << result << " // Fungsi";
+      break;
+    case 5:
+      permutation_void(n, r, result);
+      cout << "Permutasi dari " << n << " dan " << r << ": " << result << " // Void";
+      break;
+    case 6:
+      result = combination_fn(n, r);
+      cout << "Kombinasi dari " << n << " dan " << r << ": " << result << " // Fungsi";
+      break;
+    case 7:
+      combination_void(n, r, result);
+      cout << "Kombinasi dari " << n << " dan " << r << ": " << result << " // Void";
+      break;
   }
 }
 
 int main() {
-  int menu, n, r, K, P;
-  prompt_menu(menu, n, r);
+  int menu, n, r;
+  
+  cout << endl;
+  input_menu(menu, n, r);
+  if (menu == 99) return 0;
 
-  if (menu == 1) {
-    print_factorial(n);
-  } else if (menu == 2) {
-    print_permutation(n, r);
-  } else if (menu == 3) {
-    print_combination(n, r);
-  }
+  input_value(n, "n");
+  if (menu >= 4 && menu <= 7) input_value(r, "r");
+
+  print_calculation(menu, n, r);
+  cout << endl;
   return 0;
 }
