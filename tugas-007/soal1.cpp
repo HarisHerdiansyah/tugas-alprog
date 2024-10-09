@@ -11,7 +11,7 @@ using namespace std;
 
 typedef int matrix[10][10];
 
-void inputMatriks(int &row, int &col, matrix data_matrix) {
+void inputMatriks(matrix data_matrix, int &row, int &col) {
   cout << "Masukkan jumlah baris: ";
   cin >> row;
   cout << "Masukkan jumlah kolom: ";
@@ -118,16 +118,15 @@ void menu(int &option) {
 
 void executor(int option) {
   int row_a, col_a, row_b, col_b;
-  matrix mtx_a;
-  matrix mtx_b;
+  matrix mtx_a, mtx_b, hasil;
 
   switch (option) {
     case 1:
       cout << "Matriks pertama" << endl;
-      inputMatriks(row_a, col_a, mtx_a);
+      inputMatriks(mtx_a, row_a, col_a);
 
       cout << "Matriks kedua" << endl;
-      inputMatriks(row_b, col_b, mtx_b);
+      inputMatriks(mtx_b, row_b, col_b);
 
       if ((row_a != row_b) || (col_a != col_b)) {
         cout << "Ordo harus sama";
@@ -137,10 +136,10 @@ void executor(int option) {
       break;
     case 2:
       cout << "Matriks pertama" << endl;
-      inputMatriks(row_a, col_a, mtx_a);
+      inputMatriks(mtx_a, row_a, col_a);
 
       cout << "Matriks kedua" << endl;
-      inputMatriks(row_b, col_b, mtx_b);
+      inputMatriks(mtx_b, row_b, col_b);
 
       if (col_a != row_b) {
         cout << "Kolom matriks pertama harus sama dengan baris matriks kedua";
@@ -149,11 +148,11 @@ void executor(int option) {
       }
       break;
     case 3:
-      inputMatriks(row_a, col_a, mtx_a);
+      inputMatriks(mtx_a, row_a, col_a);
       transposeMatriks(mtx_a, row_a, col_a);
       break;
     case 4:
-      inputMatriks(row_a, col_a, mtx_a);
+      inputMatriks(mtx_a, row_a, col_a);
       cariJumlahBaris(mtx_a, row_a, col_a);
       cariJumlahKolom(mtx_a, row_a, col_a);
       break;
