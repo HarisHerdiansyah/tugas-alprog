@@ -38,10 +38,15 @@ bool isSorted(Larik<T> dataset, int size) {
   return true;
 }
 
+template <typename T>
+bool isString(T var) {
+  return typeid(var) == typeid(string);
+}
+
 string toLowerCase(string str) {
   string hasil = "";
   for (char s: str) {
-    hasil += s;
+    hasil += tolower(s);
   }
   return hasil;
 }
@@ -299,8 +304,15 @@ void shellSortD(Larik<T> dataset, int size) {
 template <typename T>
 void linearSearch(Larik<T> dataset, int size, T target) {
   int pos = -1;
+  bool isEqual;
   for (int i = 0; i < size; i++) {
-    if (dataset[i] == target) {
+    if constexpr (is_same<T, string>::value) {
+      isEqual = toLowerCase(dataset[i]) == toLowerCase(target);
+    } else {
+      isEqual = dataset[i] == target;
+    }
+
+    if (isEqual) {
       pos = i;
       break;
     }
@@ -319,12 +331,19 @@ void binarySearch(Larik<T> dataset, int size, T target) {
     shellSortA(dataset, size, false);
   }
 
+  bool isEqual;
   int left = 0, right = size - 1;
   int pos = -1;
   while (left <= right) {
     int mid = (left + right) / 2;
 
-    if (dataset[mid] == target) {
+    if constexpr (is_same<T, string>::value) {
+      isEqual = toLowerCase(dataset[mid]) == toLowerCase(target);
+    } else {
+      isEqual = dataset[mid] == target;
+    }
+
+    if (isEqual) {
       pos = mid;
       break;
     }
