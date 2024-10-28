@@ -400,7 +400,8 @@ void panggilFungsi(Larik<T> dataset, int size, int pilihan, T target) {
 
 int main() {
   int pilihan, size, type;
-  string target = "1"; // dummy value untuk menghindari error
+  int target_integer;
+  string target_string;
   Larik<int> data_integer;
   Larik<string> data_string;
 
@@ -419,11 +420,12 @@ int main() {
 
   if (pilihan == 13 || pilihan == 14) {
     cout << "Data yang akan dicari: "; 
-    getline(cin, target);
+    if (type == 1) cin >> target_integer;
+    else getline(cin, target_string);
   }
 
-  if (type == 1) panggilFungsi(data_integer, size, pilihan, stoi(target));
-  else if (type == 2) panggilFungsi(data_string, size, pilihan, target);
+  if (type == 1) panggilFungsi(data_integer, size, pilihan, target_integer);
+  else if (type == 2) panggilFungsi(data_string, size, pilihan, target_string);
 
   return 0;
 }
