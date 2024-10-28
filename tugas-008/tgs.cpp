@@ -227,15 +227,21 @@ void insertionSortD(Larik<T> dataset, int size) {
 }
 
 // Shell sort Ascending
+// Karena fungsi dipakai untuk mengurutkan data ketika Binary search dipanggil
+// ditambahkan paramater baru `print` dengan default value true, agar proses
+// hanya ditampilkan ketika `print` bernilai `true`
 template <typename T>
-void shellSortA(Larik<T> dataset, int size) {
-  cout << "===== Shell sort Ascending =====" << endl;
+void shellSortA(Larik<T> dataset, int size, bool print = true) {
+  if (print) cout << "===== Shell sort Ascending =====" << endl;
   for (int gap = size / 2; gap > 0; gap /= 2) {
-    cout << "Jarak " << gap << " : " << endl;
-    cetakLarik(dataset, size);
-    cout << endl;
+    if (print) {
+      cout << "Jarak " << gap << " : " << endl;
+      cetakLarik(dataset, size);
+      cout << endl;
+    }
     for (int i = gap; i < size; i++) {
-      int j, temp = dataset[i];
+      int j;
+      T temp = dataset[i];
       for (j = i; j >= gap; j -= gap) {
         if (dataset[j - gap] > temp) {
           dataset[j] = dataset[j - gap];
@@ -244,10 +250,12 @@ void shellSortA(Larik<T> dataset, int size) {
         }
       }
       dataset[j] = temp;
-      cetakLarik(dataset, size);
-      cout << endl;
+      if (print) {
+        cetakLarik(dataset, size);
+        cout << endl;
+      }
     }
-    cout << endl;
+    if (print) cout << endl;
   }
 }
 
@@ -258,7 +266,8 @@ void shellSortD(Larik<T> dataset, int size) {
   for (int gap = size / 2; gap > 0; gap /= 2) {
     cout << "Jarak " << gap << " : " << endl;
     for (int i = gap; i < size; i++) {
-      int j, temp = dataset[i];
+      int j;
+      T temp = dataset[i];
       cetakLarik(dataset, size);
       cout << endl;
       for (j = i; j >= gap; j -= gap) {
@@ -279,22 +288,26 @@ void shellSortD(Larik<T> dataset, int size) {
 
 // Linear search
 template <typename T>
-void linearSearch(Larik<T> dataset, int size, int target) {
-  int pos;
+void linearSearch(Larik<T> dataset, int size, T target) {
+  int pos = -1;
   for (int i = 0; i < size; i++) {
     if (dataset[i] == target) {
       pos = i;
       break;
     }
   }
-  cout << "Data " << target << " ditemukan di posisi ke-" << pos + 1;
+  if (pos == -1) {
+    cout << "\nData tidak ditemukan";
+  } else {
+    cout << "\nData " << target << " ditemukan di posisi ke-" << pos + 1;
+  }
 }
 
 // Binary search
 template <typename T>
-void binarySearch(Larik<T> dataset, int size, int target) {
+void binarySearch(Larik<T> dataset, int size, T target) {
   if (!isSorted(dataset, size)) {
-    shellSortA(dataset, size);
+    shellSortA(dataset, size, false);
   }
 
   int left = 0, right = size - 1;
@@ -312,10 +325,10 @@ void binarySearch(Larik<T> dataset, int size, int target) {
   }
 
   if (pos == -1) {
-    cout << "Data tidak ditemukan";
+    cout << "\nData tidak ditemukan";
   } else {
-    cout << "Data terurut (ascending): "; cetakLarik(dataset, size);
-    cout << "Data " << target << " ditemukan di posisi ke-" << pos + 1;
+    cout << "\nData terurut (ascending): "; cetakLarik(dataset, size);
+    cout << "\nData " << target << " ditemukan di posisi ke-" << pos + 1;
   }
 }
 
@@ -336,27 +349,36 @@ void pilihOpsi(int &pilihan) {
   cout << "(14) Binary search" << endl;
 
   cout << "Pilih mau yang mana ? ";
-  cin >> pilihan; cout << endl;
+  cin >> pilihan;
 }
 
 void pilihTipeData(int &type) {
-  cout << "1. Bilangan bulat (int); 2. String (string)" << endl;
-  cin >> type; cout << endl;
+  cout << "1. Bilangan bulat (int); 2. String (string): "; cin >> type;
 }
 
-template <typename T>
-void inputData(Larik<T> &dataset, int &size) {
+// Function overloading
+void inputData(Larik<int> &dataset, int &size) {
   cout << "Masukkan ukuran array : ";
   cin >> size;
 
-  cout << "Masukkan elemen-elemen array : " << endl;
+  cout << "Masukkan elemen-elemen array : ";
   for (int i = 0; i < size; i++) {
     cin >> dataset[i];
   }
 }
 
+void inputData(Larik<string> &dataset, int &size) {
+  cout << "Masukkan ukuran array : ";
+  cin >> size; cin.ignore();
+
+  cout << "Masukkan elemen-elemen array : ";
+  for (int i = 0; i < size; i++) {
+    getline(cin, dataset[i]);
+  }
+}
+
 template <typename T>
-void panggilFungsi(Larik<T> dataset, int size, int pilihan, int target) {
+void panggilFungsi(Larik<T> dataset, int size, int pilihan, T target) {
   switch (pilihan) {
     case 1: bubbleSortCara1A(dataset, size); break;
     case 2: bubbleSortCara1D(dataset, size); break;
@@ -376,30 +398,31 @@ void panggilFungsi(Larik<T> dataset, int size, int pilihan, int target) {
 }
 
 int main() {
-  int pilihan, size, type, target;
+  int pilihan, size, type;
+  string target;
   Larik<int> data_integer;
   Larik<string> data_string;
 
   pilihOpsi(pilihan);
+  pilihTipeData(type);
+
+  if (type == 1) inputData(data_integer, size);
+  else if (type == 2) inputData(data_string, size);
+  else {
+    cout << "Input tidak valid"; return 0;
+  }
+
   if (pilihan >= 1 && pilihan <= 14) {
     if (pilihan == 13 || pilihan == 14) {
-      cout << "Data yang akan dicari: "; cin >> target;
+      cin.ignore(); cout << "Data yang akan dicari: "; 
+      getline(cin, target);
     }
   } else {
     cout << "Input tidak valid!"; return 0;
   }
 
-  pilihTipeData(type);
-  if (type == 1) {
-    inputData(data_integer, size);
-    panggilFungsi(data_integer, size, pilihan, target);
-  } else if (type == 2) {
-    inputData(data_string, size);
-    panggilFungsi(data_string, size, pilihan, target);
-  }
-  else {
-    cout << "Input tidak valid!"; return 0;
-  }
+  if (type == 1) panggilFungsi(data_integer, size, pilihan, stoi(target));
+  else if (type == 2) panggilFungsi(data_string, size, pilihan, target);
 
   return 0;
 }
