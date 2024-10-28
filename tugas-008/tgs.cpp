@@ -418,7 +418,7 @@ int main() {
   }
 
   if (pilihan == 13 || pilihan == 14) {
-    cin.ignore(); cout << "Data yang akan dicari: "; 
+    cout << "Data yang akan dicari: "; 
     getline(cin, target);
   }
 
