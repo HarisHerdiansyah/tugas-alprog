@@ -371,6 +371,7 @@ void panggilFungsi(Larik<T> dataset, int size, int pilihan, int target) {
     case 11: shellSortA(dataset, size); break;
     case 12: shellSortD(dataset, size); break;
     case 13: linearSearch(dataset, size, target); break;
+    case 14: binarySearch(dataset, size, target); break;
   }
 }
 
