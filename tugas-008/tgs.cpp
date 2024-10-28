@@ -424,7 +424,6 @@ int main() {
 
   if (type == 1) panggilFungsi(data_integer, size, pilihan, stoi(target));
   else if (type == 2) panggilFungsi(data_string, size, pilihan, target);
-  cout << "tambah line";
 
   return 0;
 }
