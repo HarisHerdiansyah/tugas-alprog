@@ -11,313 +11,247 @@ using namespace std;
 
 typedef int larik[256];
 
-void swapVal(int &x, int &y)
-{
-    int temp = x;
-    x = y;
-    y = temp;
+void tukarNilai(int &x, int &y) {
+  int temp = x;
+  x = y;
+  y = temp;
 }
 
-void printArr(larik dataset, int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        cout << dataset[i] << " ";
-    }
+void cetakLarik(larik dataset, int size) {
+  for (int i = 0; i < size; i++) {
+    cout << dataset[i] << " ";
+  }
 }
 
 // Bubble sort cara 1 Ascending
-void bubbleSortCara1A(larik dataset, int size)
-{
-    cout << "===== Bubble sort cara 1 Ascending =====" << endl;
-    for (int i = 0; i < size - 1; i++)
-    {
-        cout << "Proses ke-" << i + 1 << endl;
-        printArr(dataset, size);
-        cout << endl;
-        for (int j = 0; j < size - i - 1; j++)
-        {
-            if (dataset[j] > dataset[j + 1])
-            {
-                swapVal(dataset[j], dataset[j + 1]);
-            }
-            printArr(dataset, size);
-            cout << endl;
-        }
-        cout << endl;
+void bubbleSortCara1A(larik dataset, int size) {
+  cout << "===== Bubble sort cara 1 Ascending =====" << endl;
+  for (int i = 0; i < size - 1; i++) {
+    cout << "Proses ke-" << i + 1 << endl;
+    cetakLarik(dataset, size);
+    cout << endl;
+    for (int j = 0; j < size - i - 1; j++) {
+      if (dataset[j] > dataset[j + 1]) {
+        tukarNilai(dataset[j], dataset[j + 1]);
+      }
+      cetakLarik(dataset, size);
+      cout << endl;
     }
+    cout << endl;
+  }
 }
 
 // Bubble sort cara 1 Descending
-void bubbleSortCara1D(larik dataset, int size)
-{
-    cout << "===== Bubble sort cara 1 Descending =====" << endl;
-    for (int i = 0; i < size - 1; i++)
-    {
-        cout << "Proses ke-" << i + 1 << endl;
-        printArr(dataset, size);
-        cout << endl;
-        for (int j = 0; j < size - i - 1; j++)
-        {
-            if (dataset[j] < dataset[j + 1])
-            {
-                swapVal(dataset[j], dataset[j + 1]);
-            }
-            printArr(dataset, size);
-            cout << endl;
-        }
-        cout << endl;
+void bubbleSortCara1D(larik dataset, int size) {
+  cout << "===== Bubble sort cara 1 Descending =====" << endl;
+  for (int i = 0; i < size - 1; i++) {
+    cout << "Proses ke-" << i + 1 << endl;
+    cetakLarik(dataset, size);
+    cout << endl;
+    for (int j = 0; j < size - i - 1; j++) {
+      if (dataset[j] < dataset[j + 1]) {
+        tukarNilai(dataset[j], dataset[j + 1]);
+      }
+      cetakLarik(dataset, size);
+      cout << endl;
     }
+    cout << endl;
+  }
 }
 
 // Bubble sort cara 2 Ascending
-void bubbleSortCara2A(larik dataset, int size)
-{
-    cout << "===== Bubble sort cara 2 Ascending =====" << endl;
-    for (int i = 0; i < size - 1; i++)
-    {
-        cout << "Proses ke-" << i + 1 << endl;
-        printArr(dataset, size);
-        cout << endl;
-        for (int j = size - 1; j >= i + 1; j--)
-        {
-            if (dataset[j] < dataset[j - 1])
-            {
-                swapVal(dataset[j], dataset[j - 1]);
-            }
-            printArr(dataset, size);
-            cout << endl;
-        }
-        cout << endl;
+void bubbleSortCara2A(larik dataset, int size) {
+  cout << "===== Bubble sort cara 2 Ascending =====" << endl;
+  for (int i = 0; i < size - 1; i++) {
+    cout << "Proses ke-" << i + 1 << endl;
+    cetakLarik(dataset, size);
+    cout << endl;
+    for (int j = size - 1; j >= i + 1; j--) {
+      if (dataset[j] < dataset[j - 1]) {
+        tukarNilai(dataset[j], dataset[j - 1]);
+      }
+      cetakLarik(dataset, size);
+      cout << endl;
     }
+    cout << endl;
+  }
 }
 
 // Bubble sort cara 2 Decending
-void bubbleSortCara2D(larik dataset, int size)
-{
-    cout << "===== Bubble sort cara 2 Descending =====" << endl;
-    for (int i = 0; i < size - 1; i++)
-    {
-        cout << "Proses ke-" << i + 1 << endl;
-        printArr(dataset, size);
-        cout << endl;
-        for (int j = size - 1; j >= i + 1; j--)
-        {
-            if (dataset[j] > dataset[j - 1])
-            {
-                swapVal(dataset[j], dataset[j - 1]);
-            }
-            printArr(dataset, size);
-            cout << endl;
-        }
-        cout << endl;
+void bubbleSortCara2D(larik dataset, int size) {
+  cout << "===== Bubble sort cara 2 Descending =====" << endl;
+  for (int i = 0; i < size - 1; i++) {
+    cout << "Proses ke-" << i + 1 << endl;
+    cetakLarik(dataset, size);
+    cout << endl;
+    for (int j = size - 1; j >= i + 1; j--) {
+      if (dataset[j] > dataset[j - 1]) {
+        tukarNilai(dataset[j], dataset[j - 1]);
+      }
+      cetakLarik(dataset, size);
+      cout << endl;
     }
+    cout << endl;
+  }
 }
 
 // Bubble sort cara 3 Ascending
-void bubbleSortCara3A(larik dataset, int size)
-{
-    cout << "===== Bubble sort cara 3 Ascending =====" << endl;
-    for (int i = 0; i < size - 1; i++)
-    {
-        int idx_min = i;
-        cout << "Proses ke-" << i + 1 << endl;
-        printArr(dataset, size);
-        cout << endl;
-        for (int j = i + 1; j < size; j++)
-        {
-            if (dataset[idx_min] > dataset[j])
-            {
-                swapVal(dataset[idx_min], dataset[j]);
-            }
-            printArr(dataset, size);
-            cout << endl;
-        }
-        cout << endl;
+void bubbleSortCara3A(larik dataset, int size) {
+  cout << "===== Bubble sort cara 3 Ascending =====" << endl;
+  for (int i = 0; i < size - 1; i++) {
+    int idx_min = i;
+    cout << "Proses ke-" << i + 1 << endl;
+    cetakLarik(dataset, size);
+    cout << endl;
+    for (int j = i + 1; j < size; j++) {
+      if (dataset[idx_min] > dataset[j]) {
+        tukarNilai(dataset[idx_min], dataset[j]);
+      }
+      cetakLarik(dataset, size);
+      cout << endl;
     }
+    cout << endl;
+  }
 }
 
 // Bubble sort cara 3 Descending
-void bubbleSortCara3D(larik dataset, int size)
-{
-    cout << "===== Bubble sort cara 3 Descending =====" << endl;
-    for (int i = 0; i < size - 1; i++)
-    {
-        int idx_min = i;
-        cout << "Proses ke-" << i + 1 << endl;
-        printArr(dataset, size);
-        cout << endl;
-        for (int j = i + 1; j < size; j++)
-        {
-            if (dataset[idx_min] < dataset[j])
-            {
-                swapVal(dataset[idx_min], dataset[j]);
-            }
-            printArr(dataset, size);
-            cout << endl;
-        }
-        cout << endl;
+void bubbleSortCara3D(larik dataset, int size) {
+  cout << "===== Bubble sort cara 3 Descending =====" << endl;
+  for (int i = 0; i < size - 1; i++) {
+    int idx_min = i;
+    cout << "Proses ke-" << i + 1 << endl;
+    cetakLarik(dataset, size);
+    cout << endl;
+    for (int j = i + 1; j < size; j++) {
+      if (dataset[idx_min] < dataset[j]) {
+        tukarNilai(dataset[idx_min], dataset[j]);
+      }
+      cetakLarik(dataset, size);
+      cout << endl;
     }
+    cout << endl;
+  }
 }
 
 // Selection sort Ascending
-void selectionSortA(larik dataset, int size)
-{
-    cout << "===== Selection sort Ascending =====" << endl;
-    for (int i = 0; i < size - 1; i++)
-    {
-
-        int idx_min = i;
-        for (int j = i + 1; j < size; j++)
-        {
-            if (dataset[idx_min] > dataset[j])
-            {
-                idx_min = j;
-            }
-        }
-        swapVal(dataset[i], dataset[idx_min]);
-        cout << "i = " << i << ", posisi " << idx_min << ": ";
-        printArr(dataset, size);
-        cout << endl;
+void selectionSortA(larik dataset, int size) {
+  cout << "===== Selection sort Ascending =====" << endl;
+  for (int i = 0; i < size - 1; i++) {
+    int idx_min = i;
+    for (int j = i + 1; j < size; j++) {
+      if (dataset[idx_min] > dataset[j]) {
+        idx_min = j;
+      }
     }
+    tukarNilai(dataset[i], dataset[idx_min]);
+    cout << "i = " << i << ", posisi " << idx_min << ": ";
+    cetakLarik(dataset, size);
     cout << endl;
+  }
+  cout << endl;
 }
 
 // Selection sort Descending
-void selectionSortD(larik dataset, int size)
-{
-    cout << "===== Selection sort Descending =====" << endl;
-    for (int i = 0; i < size; i++)
-    {
-
-        int idx_max = i;
-        for (int j = i + 1; j < size; j++)
-        {
-            if (dataset[idx_max] < dataset[j])
-            {
-                idx_max = j;
-            }
-        }
-        swapVal(dataset[i], dataset[idx_max]);
-        cout << "i = " << i << ", posisi " << idx_max << ": ";
-        printArr(dataset, size);
-        cout << endl;
+void selectionSortD(larik dataset, int size) {
+  cout << "===== Selection sort Descending =====" << endl;
+  for (int i = 0; i < size; i++) {
+    int idx_max = i;
+    for (int j = i + 1; j < size; j++) {
+      if (dataset[idx_max] < dataset[j]) {
+        idx_max = j;
+      }
     }
+    tukarNilai(dataset[i], dataset[idx_max]);
+    cout << "i = " << i << ", posisi " << idx_max << ": ";
+    cetakLarik(dataset, size);
+    cout << endl;
+  }
 }
 
 // Insertion sort Ascending
-void insertionSortA(larik dataset, int size)
-{
-    cout << "===== Insertion sort Ascending =====" << endl;
-    for (int i = 1; i < size; i++)
-    {
-        cout << "Proses ke-" << i << ": ";
-        for (int j = i; j >= 1; j--)
-        {
-            if (dataset[j] < dataset[j - 1])
-            {
-                swapVal(dataset[j], dataset[j - 1]);
-            }
-            else
-            {
-                break;
-            }
-        }
-        printArr(dataset, size);
-        cout << endl;
+void insertionSortA(larik dataset, int size) {
+  cout << "===== Insertion sort Ascending =====" << endl;
+  for (int i = 1; i < size; i++) {
+    cout << "Proses ke-" << i << ": ";
+    for (int j = i; j >= 1; j--) {
+      if (dataset[j] < dataset[j - 1]) {
+        tukarNilai(dataset[j], dataset[j - 1]);
+      } else {
+        break;
+      }
     }
+    cetakLarik(dataset, size);
+    cout << endl;
+  }
 }
 
 // Insertion sort Descending
-void insertionSortD(larik dataset, int size)
-{
-    cout << "===== Insertion sort Descending =====" << endl;
-    for (int i = 1; i < size; i++)
-    {
-        cout << "Proses ke-" << i << ": ";
-        for (int j = i; j >= 1; j--)
-        {
-            if (dataset[j] > dataset[j - 1])
-            {
-                swapVal(dataset[j], dataset[j - 1]);
-            }
-            else
-            {
-                break;
-            }
-        }
-        printArr(dataset, size);
-        cout << endl;
+void insertionSortD(larik dataset, int size) {
+  cout << "===== Insertion sort Descending =====" << endl;
+  for (int i = 1; i < size; i++) {
+    cout << "Proses ke-" << i << ": ";
+    for (int j = i; j >= 1; j--) {
+      if (dataset[j] > dataset[j - 1]) {
+        tukarNilai(dataset[j], dataset[j - 1]);
+      } else {
+        break;
+      }
     }
+    cetakLarik(dataset, size);
+    cout << endl;
+  }
 }
 
 // Shell sort Ascending
-void shellSortA(larik dataset, int size)
-{
-    cout << "===== Shell sort Ascending =====" << endl;
-    for (int gap = size / 2; gap > 0; gap /= 2)
-    {
-        cout << "Jarak " << gap << " : " << endl;
-        printArr(dataset, size);
-        cout << endl;
-        for (int i = gap; i < size; i++)
-        {
-            int j, temp = dataset[i];
-            for (j = i; j >= gap; j -= gap)
-            {
-                if (dataset[j - gap] > temp)
-                {
-                    dataset[j] = dataset[j - gap];
-                }
-                else
-                {
-                    break;
-                }
-            }
-            dataset[j] = temp;
-            printArr(dataset, size);
-            cout << endl;
+void shellSortA(larik dataset, int size) {
+  cout << "===== Shell sort Ascending =====" << endl;
+  for (int gap = size / 2; gap > 0; gap /= 2) {
+    cout << "Jarak " << gap << " : " << endl;
+    cetakLarik(dataset, size);
+    cout << endl;
+    for (int i = gap; i < size; i++) {
+      int j, temp = dataset[i];
+      for (j = i; j >= gap; j -= gap) {
+        if (dataset[j - gap] > temp) {
+          dataset[j] = dataset[j - gap];
+        } else {
+          break;
         }
-        cout << endl;
+      }
+      dataset[j] = temp;
+      cetakLarik(dataset, size);
+      cout << endl;
     }
+    cout << endl;
+  }
 }
 
-// BShell sort Descending
-void shellSortD(larik dataset, int size)
-{
-    cout << "===== Shell sort Descending =====" << endl;
-    for (int gap = size / 2; gap > 0; gap /= 2)
-    {
-        cout << "Jarak " << gap << " : " << endl;
-        for (int i = gap; i < size; i++)
-        {
-            int j, temp = dataset[i];
-            printArr(dataset, size);
-            cout << endl;
-            for (j = i; j >= gap; j -= gap)
-            {
-                if (dataset[j - gap] < temp)
-                {
-                    dataset[j] = dataset[j - gap];
-                }
-                else
-                {
-                    break;
-                }
-            }
-            dataset[j] = temp;
+// Shell sort Descending
+void shellSortD(larik dataset, int size) {
+  cout << "===== Shell sort Descending =====" << endl;
+  for (int gap = size / 2; gap > 0; gap /= 2) {
+    cout << "Jarak " << gap << " : " << endl;
+    for (int i = gap; i < size; i++) {
+      int j, temp = dataset[i];
+      cetakLarik(dataset, size);
+      cout << endl;
+      for (j = i; j >= gap; j -= gap) {
+        if (dataset[j - gap] < temp) {
+          dataset[j] = dataset[j - gap];
+        } else {
+          break;
         }
-        cout << endl;
+      }
+      dataset[j] = temp;
     }
-    cout << "Akhir: ";
-    printArr(dataset, size);
+    cout << endl;
+  }
+  cout << "Akhir: ";
+  cetakLarik(dataset, size);
+  cout << endl;
 }
 
-int main() {
-  int pilihan;
-  int size;
-  bool keluar = false;
-
+void pilihOpsi(int &pilihan) {
   cout << "(1) Bubble sort cara 1 Ascending" << endl;
   cout << "(2) Bubble sort cara 1 Descending" << endl;
   cout << "(3) Bubble sort cara 2 Ascending" << endl;
@@ -333,7 +267,15 @@ int main() {
 
   cout << "Pilih mau yang mana ? ";
   cin >> pilihan;
+}
 
+void inputData() {}
+
+int main() {
+  int pilihan, size;
+  larik dataset;
+
+  pilihOpsi(pilihan);
   if (pilihan > 12 || pilihan < 1) {
     cout << "Data tidak valid!" << endl;
     return 0;
@@ -341,8 +283,6 @@ int main() {
 
   cout << "Masukkan ukuran array : ";
   cin >> size;
-
-  larik dataset;
 
   cout << "Masukkan elemen-elemen array : " << endl;
   for (int i = 0; i < size; i++) {
