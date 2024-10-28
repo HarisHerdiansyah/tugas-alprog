@@ -38,6 +38,14 @@ bool isSorted(Larik<T> dataset, int size) {
   return true;
 }
 
+string toLowerCase(string str) {
+  string hasil = "";
+  for (char s: str) {
+    hasil += s;
+  }
+  return hasil;
+}
+
 // Bubble sort cara 1 Ascending
 template <typename T>
 void bubbleSortCara1A(Larik<T> dataset, int size) {
