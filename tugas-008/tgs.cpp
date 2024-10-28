@@ -22,7 +22,8 @@ void tukarNilai(T &x, T &y) {
 template <typename T>
 void cetakLarik(Larik<T> dataset, int size) {
   for (int i = 0; i < size; i++) {
-    cout << dataset[i] << " ";
+    cout << dataset[i];
+    if (i < size-1) cout << ", ";
   }
 }
 
@@ -40,7 +41,7 @@ bool isSorted(Larik<T> dataset, int size) {
 // Bubble sort cara 1 Ascending
 template <typename T>
 void bubbleSortCara1A(Larik<T> dataset, int size) {
-  cout << "===== Bubble sort cara 1 Ascending =====" << endl;
+  cout << "\n===== Bubble sort cara 1 Ascending =====" << endl;
   for (int i = 0; i < size - 1; i++) {
     cout << "Proses ke-" << i + 1 << endl;
     cetakLarik(dataset, size);
@@ -59,7 +60,7 @@ void bubbleSortCara1A(Larik<T> dataset, int size) {
 // Bubble sort cara 1 Descending
 template <typename T>
 void bubbleSortCara1D(Larik<T> dataset, int size) {
-  cout << "===== Bubble sort cara 1 Descending =====" << endl;
+  cout << "\n===== Bubble sort cara 1 Descending =====" << endl;
   for (int i = 0; i < size - 1; i++) {
     cout << "Proses ke-" << i + 1 << endl;
     cetakLarik(dataset, size);
@@ -78,7 +79,7 @@ void bubbleSortCara1D(Larik<T> dataset, int size) {
 // Bubble sort cara 2 Ascending
 template <typename T>
 void bubbleSortCara2A(Larik<T> dataset, int size) {
-  cout << "===== Bubble sort cara 2 Ascending =====" << endl;
+  cout << "\n===== Bubble sort cara 2 Ascending =====" << endl;
   for (int i = 0; i < size - 1; i++) {
     cout << "Proses ke-" << i + 1 << endl;
     cetakLarik(dataset, size);
@@ -97,7 +98,7 @@ void bubbleSortCara2A(Larik<T> dataset, int size) {
 // Bubble sort cara 2 Decending
 template <typename T>
 void bubbleSortCara2D(Larik<T> dataset, int size) {
-  cout << "===== Bubble sort cara 2 Descending =====" << endl;
+  cout << "\n===== Bubble sort cara 2 Descending =====" << endl;
   for (int i = 0; i < size - 1; i++) {
     cout << "Proses ke-" << i + 1 << endl;
     cetakLarik(dataset, size);
@@ -116,7 +117,7 @@ void bubbleSortCara2D(Larik<T> dataset, int size) {
 // Bubble sort cara 3 Ascending
 template <typename T>
 void bubbleSortCara3A(Larik<T> dataset, int size) {
-  cout << "===== Bubble sort cara 3 Ascending =====" << endl;
+  cout << "\n===== Bubble sort cara 3 Ascending =====" << endl;
   for (int i = 0; i < size - 1; i++) {
     int idx_min = i;
     cout << "Proses ke-" << i + 1 << endl;
@@ -136,7 +137,7 @@ void bubbleSortCara3A(Larik<T> dataset, int size) {
 // Bubble sort cara 3 Descending
 template <typename T>
 void bubbleSortCara3D(Larik<T> dataset, int size) {
-  cout << "===== Bubble sort cara 3 Descending =====" << endl;
+  cout << "\n===== Bubble sort cara 3 Descending =====" << endl;
   for (int i = 0; i < size - 1; i++) {
     int idx_min = i;
     cout << "Proses ke-" << i + 1 << endl;
@@ -156,7 +157,7 @@ void bubbleSortCara3D(Larik<T> dataset, int size) {
 // Selection sort Ascending
 template <typename T>
 void selectionSortA(Larik<T> dataset, int size) {
-  cout << "===== Selection sort Ascending =====" << endl;
+  cout << "\n===== Selection sort Ascending =====" << endl;
   for (int i = 0; i < size - 1; i++) {
     int idx_min = i;
     for (int j = i + 1; j < size; j++) {
@@ -175,7 +176,7 @@ void selectionSortA(Larik<T> dataset, int size) {
 // Selection sort Descending
 template <typename T>
 void selectionSortD(Larik<T> dataset, int size) {
-  cout << "===== Selection sort Descending =====" << endl;
+  cout << "\n===== Selection sort Descending =====" << endl;
   for (int i = 0; i < size; i++) {
     int idx_max = i;
     for (int j = i + 1; j < size; j++) {
@@ -193,7 +194,7 @@ void selectionSortD(Larik<T> dataset, int size) {
 // Insertion sort Ascending
 template <typename T>
 void insertionSortA(Larik<T> dataset, int size) {
-  cout << "===== Insertion sort Ascending =====" << endl;
+  cout << "\n===== Insertion sort Ascending =====" << endl;
   for (int i = 1; i < size; i++) {
     cout << "Proses ke-" << i << ": ";
     for (int j = i; j >= 1; j--) {
@@ -211,7 +212,7 @@ void insertionSortA(Larik<T> dataset, int size) {
 // Insertion sort Descending
 template <typename T>
 void insertionSortD(Larik<T> dataset, int size) {
-  cout << "===== Insertion sort Descending =====" << endl;
+  cout << "\n===== Insertion sort Descending =====" << endl;
   for (int i = 1; i < size; i++) {
     cout << "Proses ke-" << i << ": ";
     for (int j = i; j >= 1; j--) {
@@ -232,7 +233,7 @@ void insertionSortD(Larik<T> dataset, int size) {
 // hanya ditampilkan ketika `print` bernilai `true`
 template <typename T>
 void shellSortA(Larik<T> dataset, int size, bool print = true) {
-  if (print) cout << "===== Shell sort Ascending =====" << endl;
+  if (print) cout << "\n===== Shell sort Ascending =====" << endl;
   for (int gap = size / 2; gap > 0; gap /= 2) {
     if (print) {
       cout << "Jarak " << gap << " : " << endl;
@@ -262,7 +263,7 @@ void shellSortA(Larik<T> dataset, int size, bool print = true) {
 // Shell sort Descending
 template <typename T>
 void shellSortD(Larik<T> dataset, int size) {
-  cout << "===== Shell sort Descending =====" << endl;
+  cout << "\n===== Shell sort Descending =====" << endl;
   for (int gap = size / 2; gap > 0; gap /= 2) {
     cout << "Jarak " << gap << " : " << endl;
     for (int i = gap; i < size; i++) {
@@ -371,7 +372,7 @@ void inputData(Larik<string> &dataset, int &size) {
   cout << "Masukkan ukuran array : ";
   cin >> size; cin.ignore();
 
-  cout << "Masukkan elemen-elemen array : ";
+  cout << "Masukkan elemen-elemen array (pisahkan dengan newline) :\n";
   for (int i = 0; i < size; i++) {
     getline(cin, dataset[i]);
   }
@@ -399,11 +400,15 @@ void panggilFungsi(Larik<T> dataset, int size, int pilihan, T target) {
 
 int main() {
   int pilihan, size, type;
-  string target;
+  string target = "1"; // dummy value untuk menghindari error
   Larik<int> data_integer;
   Larik<string> data_string;
 
   pilihOpsi(pilihan);
+  if (pilihan < 1 || pilihan > 14) {
+    cout << "Input tidak valid"; return 0;
+  }
+
   pilihTipeData(type);
 
   if (type == 1) inputData(data_integer, size);
@@ -412,13 +417,9 @@ int main() {
     cout << "Input tidak valid"; return 0;
   }
 
-  if (pilihan >= 1 && pilihan <= 14) {
-    if (pilihan == 13 || pilihan == 14) {
-      cin.ignore(); cout << "Data yang akan dicari: "; 
-      getline(cin, target);
-    }
-  } else {
-    cout << "Input tidak valid!"; return 0;
+  if (pilihan == 13 || pilihan == 14) {
+    cin.ignore(); cout << "Data yang akan dicari: "; 
+    getline(cin, target);
   }
 
   if (type == 1) panggilFungsi(data_integer, size, pilihan, stoi(target));
