@@ -50,7 +50,7 @@ void bubbleSortCara1A(larik dataset, int size) {
     cetakLarik(dataset, size);
     cout << endl;
     for (int j = 0; j < size - i - 1; j++) {
-      if (dataset[j] > dataset[j + 1]) {
+      if (toLowerCase(dataset[j]) > toLowerCase(dataset[j + 1])) {
         tukarNilai(dataset[j], dataset[j + 1]);
       }
       cetakLarik(dataset, size);
@@ -68,7 +68,7 @@ void bubbleSortCara1D(larik dataset, int size) {
     cetakLarik(dataset, size);
     cout << endl;
     for (int j = 0; j < size - i - 1; j++) {
-      if (dataset[j] < dataset[j + 1]) {
+      if (toLowerCase(dataset[j]) < toLowerCase(dataset[j + 1])) {
         tukarNilai(dataset[j], dataset[j + 1]);
       }
       cetakLarik(dataset, size);
@@ -86,7 +86,7 @@ void bubbleSortCara2A(larik dataset, int size) {
     cetakLarik(dataset, size);
     cout << endl;
     for (int j = size - 1; j >= i + 1; j--) {
-      if (dataset[j] < dataset[j - 1]) {
+      if (toLowerCase(dataset[j]) < toLowerCase(dataset[j - 1])) {
         tukarNilai(dataset[j], dataset[j - 1]);
       }
       cetakLarik(dataset, size);
@@ -104,7 +104,7 @@ void bubbleSortCara2D(larik dataset, int size) {
     cetakLarik(dataset, size);
     cout << endl;
     for (int j = size - 1; j >= i + 1; j--) {
-      if (dataset[j] > dataset[j - 1]) {
+      if (toLowerCase(dataset[j]) > toLowerCase(dataset[j - 1])) {
         tukarNilai(dataset[j], dataset[j - 1]);
       }
       cetakLarik(dataset, size);
@@ -123,7 +123,7 @@ void bubbleSortCara3A(larik dataset, int size) {
     cetakLarik(dataset, size);
     cout << endl;
     for (int j = i + 1; j < size; j++) {
-      if (dataset[idx_min] > dataset[j]) {
+      if (toLowerCase(dataset[idx_min]) > toLowerCase(dataset[j])) {
         tukarNilai(dataset[idx_min], dataset[j]);
       }
       cetakLarik(dataset, size);
@@ -142,7 +142,7 @@ void bubbleSortCara3D(larik dataset, int size) {
     cetakLarik(dataset, size);
     cout << endl;
     for (int j = i + 1; j < size; j++) {
-      if (dataset[idx_min] < dataset[j]) {
+      if (toLowerCase(dataset[idx_min]) < toLowerCase(dataset[j])) {
         tukarNilai(dataset[idx_min], dataset[j]);
       }
       cetakLarik(dataset, size);
@@ -158,7 +158,7 @@ void selectionSortA(larik dataset, int size) {
   for (int i = 0; i < size - 1; i++) {
     int idx_min = i;
     for (int j = i + 1; j < size; j++) {
-      if (dataset[idx_min] > dataset[j]) {
+      if (toLowerCase(dataset[idx_min]) > toLowerCase(dataset[j])) {
         idx_min = j;
       }
     }
@@ -176,7 +176,7 @@ void selectionSortD(larik dataset, int size) {
   for (int i = 0; i < size; i++) {
     int idx_max = i;
     for (int j = i + 1; j < size; j++) {
-      if (dataset[idx_max] < dataset[j]) {
+      if (toLowerCase(dataset[idx_max]) < toLowerCase(dataset[j])) {
         idx_max = j;
       }
     }
@@ -193,7 +193,7 @@ void insertionSortA(larik dataset, int size) {
   for (int i = 1; i < size; i++) {
     cout << "Proses ke-" << i << ": ";
     for (int j = i; j >= 1; j--) {
-      if (dataset[j] < dataset[j - 1]) {
+      if (toLowerCase(dataset[j]) < toLowerCase(dataset[j - 1])) {
         tukarNilai(dataset[j], dataset[j - 1]);
       } else {
         break;
@@ -210,7 +210,7 @@ void insertionSortD(larik dataset, int size) {
   for (int i = 1; i < size; i++) {
     cout << "Proses ke-" << i << ": ";
     for (int j = i; j >= 1; j--) {
-      if (dataset[j] > dataset[j - 1]) {
+      if (toLowerCase(dataset[j]) > toLowerCase(dataset[j - 1])) {
         tukarNilai(dataset[j], dataset[j - 1]);
       } else {
         break;
@@ -237,7 +237,7 @@ void shellSortA(larik dataset, int size, bool print = true) {
       int j;
       string temp = dataset[i];
       for (j = i; j >= gap; j -= gap) {
-        if (dataset[j - gap] > temp) {
+        if (toLowerCase(dataset[j - gap]) > toLowerCase(temp)) {
           dataset[j] = dataset[j - gap];
         } else {
           break;
@@ -264,7 +264,7 @@ void shellSortD(larik dataset, int size) {
       cetakLarik(dataset, size);
       cout << endl;
       for (j = i; j >= gap; j -= gap) {
-        if (dataset[j - gap] < temp) {
+        if (toLowerCase(dataset[j - gap]) < toLowerCase(temp)) {
           dataset[j] = dataset[j - gap];
         } else {
           break;
