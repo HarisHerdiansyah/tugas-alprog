@@ -251,6 +251,11 @@ void shellSortA(larik dataset, int size, bool print = true) {
     }
     if (print) cout << endl;
   }
+  if (print) {
+    cout << "Akhir: ";
+    cetakLarik(dataset, size);
+    cout << endl;
+  }
 }
 
 // Shell sort Descending
