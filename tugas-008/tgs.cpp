@@ -307,7 +307,7 @@ void linearSearch(Larik<T> dataset, int size, T target) {
   bool isEqual;
   for (int i = 0; i < size; i++) {
     if constexpr (is_same<T, string>::value) {
-      isEqual = toLowerCase(dataset[i]) == toLowerCase(target);
+      isEqual = toLowerCase(dataset[i]).find(toLowerCase(target)) != string::npos;
     } else {
       isEqual = dataset[i] == target;
     }
@@ -331,14 +331,16 @@ void binarySearch(Larik<T> dataset, int size, T target) {
     shellSortA(dataset, size, false);
   }
 
-  bool isEqual;
+  bool isEqual, compare;
   int left = 0, right = size - 1;
   int pos = -1;
+  string d, t;
   while (left <= right) {
     int mid = (left + right) / 2;
 
     if constexpr (is_same<T, string>::value) {
-      isEqual = toLowerCase(dataset[mid]) == toLowerCase(target);
+      d = toLowerCase(dataset[mid]), t = toLowerCase(target);
+      isEqual = d.find(t) != string::npos;
     } else {
       isEqual = dataset[mid] == target;
     }
@@ -348,7 +350,10 @@ void binarySearch(Larik<T> dataset, int size, T target) {
       break;
     }
 
-    if (dataset[mid] < target) left = mid + 1;
+    if constexpr (is_same<T, string>::value) compare = d < t;
+    else compare = dataset[mid] < target;
+
+    if (compare) left = mid + 1;
     else right = mid - 1;
   }
 
