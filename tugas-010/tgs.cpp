@@ -3,7 +3,8 @@
     Nama anggota kelompok : Aulia Ramdani Nur / 140810240002
                             Risyam Muhammad Iesqillah / 140810240032
                             Haris Herdiansyah / 140810240074
-    Deskripsi program : Program sorting Ascending, Descending, bubble sort, selection sort, insertion sort, dan shell sort.
+    Deskripsi program : Program sorting Ascending, Descending, bubble sort, selection sort, insertion sort, shell sort, linear search, dan binary search.
+                        Dengan tipe data array of char atau string.
 */
 
 #include <bits/stdc++.h>
